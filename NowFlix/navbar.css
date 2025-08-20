@@ -1,0 +1,100 @@
+/*Nav*/
+* {
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    var(--nowflix-deep-purple),
+    blueviolet
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/*hero container font style to display movie title */
+
+.logo {
+  color: var(--nowflix-yellow);
+  font-size: 1.7rem;
+  font-weight: 900;
+  padding-right: 1.5rem;
+}
+
+.btn,
+i {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.btn:hover {
+  color: var(--nowflix-yellow);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  align-content: center;
+  align-items: center;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/*nav right */
+.nav-right {
+  align-items: center;
+}
+
+.btn.register-btn {
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  background-color: white;
+  color: var(--nowflix-deep-purple);
+  border-radius: 10px;
+}
+.btn.help-btn {
+  font-size: 14px;
+  padding: 0.12rem 0.48rem 0.12rem 0.48rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+}
+.btn.sign-in-btn {
+  color: white;
+}
+
+.search-container {
+  border: 1px solid var(--white-outline);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5rem;
+  width: 53px;
+  overflow: hidden;
+  transition: var(--transition-slow);
+}
+.search-container > i {
+  font-size: 1.35rem;
+}
+
+#search {
+  background: transparent;
+  border: none;
+  outline: none;
+  caret-color: white;
+  color: white;
+  width: 100%;
+  font-weight: 500;
+  line-height: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.genre-active {
+  color: white;
+}

@@ -1,0 +1,80 @@
+.browse-container {
+  position: relative;
+  margin-top: 0.4rem;
+  z-index: 10;
+}
+.browse-btn-container {
+  display: flex;
+  align-items: center;
+}
+.browse-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  color: white;
+  border: 1px solid var(--white-outline);
+  display: flex;
+  height: 30rem;
+  width: 40rem;
+  border-radius: 10px;
+}
+.chevron-indicator {
+  font-size: 0.8rem;
+  transition: var(--transition-fast);
+}
+.browse-container:hover .browse-btn,
+.browse-container:hover .browse-dropdown {
+  display: flex;
+  color: var(--nowflix-yellow);
+  visibility: visible;
+  opacity: 1;
+}
+.browse-container:hover .chevron-indicator {
+  transform: rotate(180deg);
+  color: var(--nowflix-yellow);
+}
+
+.dark-active {
+  position: fixed;
+  inset: 0;
+  background-color: var(--nowflix-deep-purple);
+  opacity: 0.5;
+  transition: var(--transition-fast);
+  z-index: 9;
+}
+
+/*inside dropdown*/
+
+.browse-dropdown-left {
+  background-color: var(--browse-left-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 50%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.browse-dropdown-right {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--nowflix-deep-purple);
+  padding: 1rem;
+  width: 50%;
+}
+
+.tabs {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn.genres,
+.btn.collections {
+  color: white;
+}
+.tabs:hover {
+  background-color: var(--tab-hover);
+  border-radius: 10px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="browse.css" />
+    <link rel="stylesheet" href="base.css" />
+    <title>NowFlix</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <div class="logo">NowFlix</div>
+          <div class="browse-container">
+            <div class="browse-btn-container">
+              <button class="btn browse-btn">Browse</button>
+              <i class="chevron-indicator fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="browse-dropdown">
+              <div class="browse-dropdown-left">
+                <div class="tabs">
+                  <button class="btn collections">Collections</button
+                  ><i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="tabs">
+                  <button class="btn genres">genres</button
+                  ><i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="browse-dropdown-right">
+                <ul class="tabs-list"></ul>
+              </div>
+            </div>
+          </div>
+          <button class="btn">Movies</button>
+          <button class="btn">TV Shows</button>
+        </div>
+
+        <div class="nav-right">
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              id="search"
+              type="search"
+              placeholder="Find Movies, TV Shows and More."
+              autocomplete="off"
+            />
+          </div>
+          <button class="btn register-btn">Register</button>
+          <button class="btn sign-in-btn">Sign In</button>
+          <button class="btn help-btn">?</button>
+        </div>
+      </nav>
+    </header>
+    <script
+      src="https://kit.fontawesome.com/a3b6dc3996.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="nav.js"></script>
+  </body>
+</html>
