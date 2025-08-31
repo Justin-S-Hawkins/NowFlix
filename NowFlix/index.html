@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,14 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="browse.css" />
-    <link rel="stylesheet" href="base.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/browse.css" />
+    <link rel="stylesheet" href="CSS/base.css" />
+    <link rel="stylesheet" href="CSS/hero.css" />
     <title>NowFlix</title>
   </head>
   <body>
-    <div class="overlay"></div>
+    <!-- HEADER / NAVBAR -->
     <header>
+      <div class="overlay"></div>
       <nav>
         <div class="nav-left">
           <div class="logo">NowFlix</div>
@@ -31,11 +36,11 @@
             <div class="browse-dropdown">
               <div class="browse-dropdown-left">
                 <div class="tabs">
-                  <button class="btn collections">Collections</button
+                  <button class="btn genres">genres</button
                   ><i class="fa-solid fa-chevron-right"></i>
                 </div>
                 <div class="tabs">
-                  <button class="btn genres">genres</button
+                  <button class="btn collections">Collections</button
                   ><i class="fa-solid fa-chevron-right"></i>
                 </div>
               </div>
@@ -65,10 +70,82 @@
         </div>
       </nav>
     </header>
+    <!-- HERO BACKDROP SECTION -->
+    <section id="hero-container">
+      <div class="arrows">
+        <i class="fa-solid fa-circle-chevron-left hero-arrow-left"></i>
+        <i class="fa-solid fa-circle-chevron-right hero-arrow-right"></i>
+      </div>
+      <div class="hero-backdrop"><ul class="hero-backdrop-list"></ul></div>
+      <!-- MOVIE OVERVIEW SECTION-->
+    </section>
+    <section class="overview-container">
+      <div class="movie-overview">
+        <div class="movie-poster"></div>
+        <div class="like-container">
+          <div class="like"></div>
+          <div class="dislike"></div>
+        </div>
+        <div class="add-to-my-list"></div>
+        <div class="share-container">
+          <div class="share"></div>
+          <div class="report-problem"></div>
+        </div>
+      </div>
+
+      <div class="movie-info-overview">
+        <h2 class="overview-title"></h2>
+        <div class="moive-info-linear">
+          <span class="year"></span>
+          <span class="genres"></span>
+          <span class="content-rating"></span>
+        </div>
+        <div class="description-container">
+          <div class="movie-description"></div>
+          <div class="language"></div>
+          <div class="starring"></div>
+          <div class="directed-by"></div>
+          <hr />
+        </div>
+      </div>
+    </section>
+
     <script
       src="https://kit.fontawesome.com/a3b6dc3996.js"
       crossorigin="anonymous"
     ></script>
-    <script src="nav.js"></script>
+    <!-- <script src="nav.js"></script> -->
+    <script type="module" src="JS/main.js"></script>
   </body>
 </html>
+
+<!-- <div class="overview-container">
+  <div class="movie-overview">
+    <div class="movie-poster"></div>
+    <div class="like-container">
+      <div class="like"></div>
+      <div class="dislike"></div>
+    </div>
+    <div class="add-to-my-list"></div>
+    <div class="share-container">
+      <div class="share"></div>
+      <div class="report-problem"></div>
+    </div>
+  </div>
+
+  <div class="movie-info-overview">
+    <h2 class="overview-title"></h2>
+    <div class="moive-info-linear">
+      <span class="year"></span>
+      <span class="genres"></span>
+      <span class="content-rating"></span>
+    </div>
+    <div class="description-container">
+      <div class="movie-description"></div>
+      <div class="language"></div>
+      <div class="starring"></div>
+      <div class="directed-by"></div>
+      <hr />
+    </div>
+  </div>
+</div> -->

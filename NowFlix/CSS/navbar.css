@@ -5,11 +5,7 @@
   font-weight: 700;
 }
 body {
-  background-image: linear-gradient(
-    to bottom,
-    var(--nowflix-deep-purple),
-    blueviolet
-  );
+  background-color: rgba(18, 5, 28, 1);
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -40,6 +36,7 @@ nav {
   margin: 1rem;
   align-content: center;
   align-items: center;
+  z-index: 10;
 }
 .nav-left,
 .nav-right {
@@ -97,4 +94,17 @@ nav {
 
 .genre-active {
   color: white;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding-bottom: 1rem;
+  z-index: 10;
+}
+.dark-header {
+  background-color: var(--nowflix-deep-purple);
 }

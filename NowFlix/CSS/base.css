@@ -1,0 +1,25 @@
+:root {
+  --transition-fast: all 0.3s ease-in-out;
+  --transition-slow: all 0.5s ease-in-out;
+  --nowflix-deep-purple: rgb(13, 7, 18);
+  --nowflix-yellow: rgb(255, 254, 63);
+  --hero-titles: normal "Anton" 400 sans-serif;
+  --browse-left-bg: #28253d;
+  --white-outline: rgba(255, 255, 255, 0.5);
+  --movie-data: rgba(255, 255, 255, 0.9);
+  --tab-hover: rgb(62, 59, 81);
+  --li-hover: rgb(45, 43, 57);
+  --title-color: #fcfcfc;
+}
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
