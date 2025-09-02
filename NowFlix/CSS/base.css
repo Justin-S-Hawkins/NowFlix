@@ -23,3 +23,10 @@ button {
 * {
   box-sizing: border-box;
 }
+/* * {
+  background-color: rgba(255, 0, 0, 0.1) !important;
+}
+.browse-container {
+  background-color: rgba(28, 217, 84, 0.5) !important;
+  z-index: 1000 !important;
+} */

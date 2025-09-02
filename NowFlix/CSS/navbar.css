@@ -17,6 +17,7 @@ body {
   font-size: 1.7rem;
   font-weight: 900;
   padding-right: 1.5rem;
+  position: relative;
 }
 
 .btn,
@@ -24,6 +25,7 @@ i {
   border: none;
   background-color: transparent;
   color: white;
+  width: fit-content;
 }
 
 .btn:hover {
@@ -36,18 +38,25 @@ nav {
   margin: 1rem;
   align-content: center;
   align-items: center;
-  z-index: 10;
 }
+
+.nav-left {
+  z-index: 5;
+}
+
 .nav-left,
 .nav-right {
   display: flex;
   gap: 1rem;
-}
-
-/*nav right */
-.nav-right {
   align-items: center;
 }
+.tv-shows {
+  width: 6rem;
+}
+/*nav right */
+/* .nav-right {
+  align-items: center;
+} */
 
 .btn.register-btn {
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
@@ -103,7 +112,7 @@ header {
   right: 0;
   background-color: transparent;
   padding-bottom: 1rem;
-  z-index: 10;
+  z-index: 1;
 }
 .dark-header {
   background-color: var(--nowflix-deep-purple);

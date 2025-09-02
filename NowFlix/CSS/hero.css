@@ -1,12 +1,7 @@
 /*hero styles */
 
 #hero-container {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 30%;
-  width: 100%; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +36,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
   width: 100vw;
 }
 
@@ -143,4 +137,53 @@
   font-size: 1rem;
   padding: 0.2rem;
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dots-container {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  top: 65%;
+  left: 37%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--movie-data);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.active-dot {
+  background-color: rgb(80, 80, 43);
+  width: 2rem;
+  border-radius: 6px;
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--nowflix-yellow);
+  border-radius: 6px;
+}
+
+.dot.active-dot::before {
+  animation: fill 5s linear forwards;
+}
+
+@keyframes fill {
+  from {
+    width: 0.7rem;
+  }
+  to {
+    width: 100%;
+  }
 }
