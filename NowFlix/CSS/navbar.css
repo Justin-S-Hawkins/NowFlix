@@ -7,7 +7,7 @@
 body {
   background-color: rgba(18, 5, 28, 1);
   background-repeat: no-repeat;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /*hero container font style to display movie title */

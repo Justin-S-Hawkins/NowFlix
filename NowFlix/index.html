@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="CSS/browse.css" />
     <link rel="stylesheet" href="CSS/base.css" />
     <link rel="stylesheet" href="CSS/hero.css" />
+    <link rel="stylesheet" href="CSS/overviewModal.css" />
     <title>NowFlix</title>
   </head>
   <body>
@@ -70,6 +71,7 @@
         </div>
       </nav>
     </header>
+
     <!-- HERO BACKDROP SECTION -->
     <section id="hero-container">
       <div class="arrows">
@@ -80,28 +82,39 @@
         <ul class="hero-backdrop-list"></ul>
         <div class="dots-container"></div>
       </div>
-      <!-- MOVIE OVERVIEW SECTION-->
     </section>
-    <!-- <section class="overview-container">
+
+    <!-- MOVIE OVERVIEW SECTION-->
+    <section class="overview-container">
+      <i class="fa-solid fa-xmark close-modal"></i>
       <div class="movie-overview">
         <div class="movie-poster"></div>
         <div class="like-container">
-          <div class="like"></div>
-          <div class="dislike"></div>
+          <div class="like overview-btns">
+            <i class="fa-regular fa-thumbs-up"></i>
+          </div>
+          <div class="dislike overview-btns">
+            <i class="fa-regular fa-thumbs-down"></i>
+          </div>
         </div>
-        <div class="add-to-my-list"></div>
+        <div class="add-to-my-list overview-btns">Add to My List</div>
         <div class="share-container">
-          <div class="share"></div>
-          <div class="report-problem"></div>
+          <div class="share overview-btns">Share</div>
+          <div class="report-problem overview-btns">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
         </div>
       </div>
 
       <div class="movie-info-overview">
         <h2 class="overview-title"></h2>
-        <div class="moive-info-linear">
-          <span class="year"></span>
-          <span class="genres"></span>
-          <span class="content-rating"></span>
+        <div class="movie-info-linear">
+          <span class="overview-year"></span>
+          <span class="overview-dur"></span>
+          <span class="overview-cc">
+            <i class="fa-solid fa-closed-captioning"></i
+          ></span>
+          <span class="overview-content-rating"></span>
         </div>
         <div class="description-container">
           <div class="movie-description"></div>
@@ -111,7 +124,7 @@
           <hr />
         </div>
       </div>
-    </section> -->
+    </section>
 
     <script
       src="https://kit.fontawesome.com/a3b6dc3996.js"

@@ -1,4 +1,5 @@
-import { getPopularMovies } from "./popularBackdrop.js";
+// import { getPopularMovies } from "./popularBackdrop.js";
+import { getPopularMovies } from "./renderBackdrop.js";
 
 const searchContainer = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");

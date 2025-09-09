@@ -1,11 +1,11 @@
 /*hero styles */
 
-#hero-container {
+/* #hero-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .hero-arrow-right,
 .hero-arrow-left {
@@ -37,6 +37,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
+  min-width: 100%;
+  transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 /*backdrop styles*/
@@ -67,14 +70,14 @@
   font-weight: 300;
   color: var(--movie-data);
 }
-.overview-btn {
+/* .overview-btn {
   width: 2rem;
   height: 2rem;
   background-color: wheat;
 }
 .overview-btn:hover {
   background-color: blue;
-}
+} */
 
 .star-container {
   display: flex;
@@ -145,7 +148,7 @@
   position: absolute;
   top: 65%;
   left: 37%;
-
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
