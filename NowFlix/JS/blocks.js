@@ -568,49 +568,50 @@ const left = () => {
 //   backdropList.append(li);
 // };
 
-const renderBackdrop = (movies) => {
-  /*clear backdrop*/
-  backdropList.innerHTML = "";
-  /*current index === current backdrop / movie */
-  const movie = movies[currentIndex];
-  // console.log(movies[currentIndex]);
-  // const movie = movies[currentIndex];
+// const renderBackdrop = (movies) => {
+//   /*clear backdrop*/
+//   backdropList.innerHTML = "";
+//   /*current index === current backdrop / movie */
+//   const movie = movies[currentIndex];
+//   // console.log(movies[currentIndex]);
+//   // const movie = movies[currentIndex];
 
-  /*create the li that will be the dom container for all the informaion in the ul (backdropList)*/
-  const li = document.createElement("li");
+//   /*create the li that will be the dom container for all the informaion in the ul (backdropList)*/
+//   const li = document.createElement("li");
 
-  /*adding the class for positioning*/
-  li.classList.add("backdrop-li");
-  /*styling the background for the li*/
-  // li.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`;
-  // li.style.backgroundImage = `linear-gradient(to bottom, rgb(255,255,255), rgb(255,255,255) url(https://image.tmdb.org/t/p/original${movie.backdrop_path}))`;
-  li.style.backgroundImage = `linear-gradient(to bottom, rgba(18, 5, 28, 1) -10%, transparent, transparent , rgba(18, 5, 28, 1)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`;
-  /* create the container to append all the movie information to */
-  const InfoContainer = document.createElement("div");
-  /*adding class for color and positioning */
-  // InfoContainer.classList.add("movie-data");
-  InfoContainer.classList.add("info-layout");
-  /*build dots rotation*/
+//   /*adding the class for positioning*/
+//   li.classList.add("backdrop-li");
+//   /*styling the background for the li*/
+//   // li.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`;
+//   // li.style.backgroundImage = `linear-gradient(to bottom, rgb(255,255,255), rgb(255,255,255) url(https://image.tmdb.org/t/p/original${movie.backdrop_path}))`;
+//   li.style.backgroundImage = `linear-gradient(to bottom, rgba(18, 5, 28, 1) -10%, transparent, transparent , rgba(18, 5, 28, 1)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`;
+//   /* create the container to append all the movie information to */
+//   const InfoContainer = document.createElement("div");
+//   /*adding class for color and positioning */
+//   // InfoContainer.classList.add("movie-data");
+//   InfoContainer.classList.add("info-layout");
+//   /*build dots rotation*/
 
-  /*call movieData function and input the container, and the movie, you want the information from and appended to the container in the parameters.*/
-  movieData(movie, InfoContainer);
-  /*append the container to the li*/
-  li.append(InfoContainer);
-  /*append the li to the backdrop ul */
+//   /*call movieData function and input the container, and the movie, you want the information from and appended to the container in the parameters.*/
+//   movieData(movie, InfoContainer);
+//   /*append the container to the li*/
+//   li.append(InfoContainer);
+//   /*append the li to the backdrop ul */
 
-  for (let i = 0; i < movies.length; i++) {
-    const dot = document.createElement("span");
-    dot.classList.add("dot");
-    dotsContainer.append(dot);
-    if (i === currentIndex) {
-      dot.classList.add("active-dot");
-    } else {
-      dot.classList.remove("active-dot");
-    }
-  }
-  // console.log(dotsContainer);
-  backdropList.append(li);
-};
+//   for (let i = 0; i < movies.length; i++) {
+//     const dot = document.createElement("span");
+//     dot.classList.add("dot");
+//     dotsContainer.append(dot);
+//     if (i === currentIndex) {
+//       dot.classList.add("active-dot");
+//     } else {
+//       dot.classList.remove("active-dot");
+//     }
+//   }
+//   // console.log(dotsContainer);
+//   backdropList.append(li);
+// };
+
 console.log(movieArray);
 // renderBackdrop(movieArray);
 // const renderBackdrops = (movies) => {
@@ -748,7 +749,6 @@ const movieData = async (movie, container) => {
   info.append(year, durationElm, genres, overviewBtn, rating);
   container.append(movieTitle, info, playContainer);
 };
-
 /*Grab durration*/
 async function getDuration(movie) {
   const getDur = await fetch(

@@ -1,6 +1,6 @@
 import { apiKey } from "./renderBackdrop.js";
 import { overviewModal, overviewBtn } from "./overview.js";
-const genreMap = {
+export const genreMap = {
   28: "Action",
   12: "Adventure",
   16: "Animation",

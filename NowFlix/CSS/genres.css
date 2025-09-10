@@ -1,0 +1,68 @@
+.genres-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  top: 80%;
+  left: 4%;
+}
+
+.genre-chevron-tab {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.genre-chevron-tab:hover {
+  color: var(--nowflix-yellow);
+}
+
+.genre-chevron {
+  margin-top: 0.2rem;
+  font-size: 1.3rem;
+}
+
+.genre-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.genre-poster-path {
+  width: 15rem;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: var(--transition-fast);
+}
+.genre-poster-path:hover {
+  transform: scale(1.15);
+  overflow: hidden;
+}
+.movie-li {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+}
+
+.scroll {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+  margin: 0;
+}
+.container-m {
+  width: 15rem;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 8px;
+}

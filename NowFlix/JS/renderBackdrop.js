@@ -2,8 +2,8 @@ import { movieData } from "./renderMovieData.js";
 /*build dots rotation*/
 export const apiKey = "89ace7f2ce3d9aef28abb3f6cb2d809e";
 const popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`; /* data.results */
-const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`; /* data.genres */
-
+// const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`; /* data.genres */
+// console.log(genreUrl);
 /*Dom Elements*/
 const leftArrow = document.querySelector(".hero-arrow-left");
 const rightArrow = document.querySelector(".hero-arrow-right");
