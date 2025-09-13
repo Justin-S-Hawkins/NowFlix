@@ -41,13 +41,24 @@
   transform: scale(1.15);
   overflow: hidden;
 }
-.movie-li {
-  width: 100%;
+/* .movie-li {
   overflow: hidden;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
   border-radius: 8px;
   gap: 1rem;
+  width: 15rem;
+} */
+.movie-li {
+  flex: 0 0 auto; /* don’t shrink, keep natural width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center the poster + title */
+  gap: 0.5rem; /* smaller spacing between poster & title */
+  padding: 0;
+  margin: 0;
+  width: 15rem; /* match poster width */
 }
 
 .movie-title {
@@ -59,10 +70,17 @@
   gap: 1rem;
   padding-left: 0;
   margin: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100vw;
+  scrollbar-width: none;
 }
 .container-m {
-  width: 15rem;
-  height: 20rem;
+  /* height: 20rem; */
   overflow: hidden;
   border-radius: 8px;
+}
+
+.play-btn {
+  position: absolute;
 }
