@@ -22,7 +22,7 @@
   width: 40rem;
 
   border-radius: 10px;
-  z-index: 100;
+  z-index: 1000;
   visibility: hidden;
 }
 .chevron-indicator {
@@ -89,7 +89,8 @@
   width: 50%;
 }
 
-.tabs {
+.tabs-col,
+.tabs-gen {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -118,10 +119,10 @@
   background-color: var(--li-hover);
   border-radius: 10px;
 } */
-.tabs-list {
+/* .tabs-list {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 0;
   padding-right: 1rem;
-}
+} */

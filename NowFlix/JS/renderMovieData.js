@@ -44,7 +44,7 @@ export const movieData = async (movie, container) => {
     .filter(Boolean)
     .join(", ");
   genres.textContent = value;
-  overviewModal(movie, durationText);
+  overviewModal(movie, durationText, overviewBtn);
 
   /* Play button */
   const playContainer = document.createElement("div");
@@ -79,7 +79,7 @@ export const movieData = async (movie, container) => {
 };
 
 /*Grab durration*/
-async function getDuration(movie) {
+export async function getDuration(movie) {
   const getDur = await fetch(
     `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=en-US`
   );

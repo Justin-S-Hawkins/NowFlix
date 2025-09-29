@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="CSS/hero.css" />
     <link rel="stylesheet" href="CSS/genres.css" />
     <link rel="stylesheet" href="CSS/overviewModal.css" />
+    <link rel="stylesheet" href="CSS/favorites.css" />
     <title>NowFlix</title>
   </head>
   <body>
@@ -37,23 +38,31 @@
 
             <div class="browse-dropdown">
               <div class="browse-dropdown-left">
-                <div class="tabs">
+                <div class="tabs-gen">
                   <button class="btn genres">genres</button
                   ><i class="fa-solid fa-chevron-right"></i>
+                  <div class="left-dropdown">
+                    <ul class="genre-list"></ul>
+                  </div>
                 </div>
-                <div class="tabs">
+                <div class="tabs-col">
                   <button class="btn collections">Collections</button
                   ><i class="fa-solid fa-chevron-right"></i>
+                  <div class="right-dropdown">
+                    <ul class="collections-list">
+                      <li class="col-li favorites">My Favorites</li>
+                      <li class="col-li liked-list">My likes</li>
+                      <li class="col-li dislike-list">My dislikes</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
-              <div class="browse-dropdown-right">
-                <ul class="tabs-list"></ul>
-              </div>
+              <div class="browse-dropdown-right"></div>
             </div>
           </div>
 
-          <button class="btn">Movies</button>
+          <button class="btn movies">Movies</button>
           <button class="btn tv-shows">TV Shows</button>
         </div>
         <div class="nav-right">
@@ -126,6 +135,16 @@
         </div>
       </div>
     </section>
+    <section class="collection-section">
+      <div class="favorite-collection">
+        <i class="fa-solid fa-xmark close-modal-fav"></i>
+        <div class="fav-title-container">
+          <h2 class="col-title fav-title">Favorites</h2>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <ul class="favorite-list"></ul>
+      </div>
+    </section>
     <!-- genre section -->
     <section class="genres-section">
       <div class="genres-container"></div>
@@ -138,6 +157,7 @@
     <!-- <script src="nav.js"></script> -->
     <script type="module" src="JS/main.js"></script>
     <script type="module" src="JS/renderGenres.js"></script>
+    <script type="module" src="JS/favorites.js"></script>
   </body>
 </html>
 

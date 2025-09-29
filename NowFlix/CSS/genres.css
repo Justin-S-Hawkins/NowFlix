@@ -59,6 +59,7 @@
   padding: 0;
   margin: 0;
   width: 15rem; /* match poster width */
+  position: relative;
 }
 
 .movie-title {
@@ -79,8 +80,4 @@
   /* height: 20rem; */
   overflow: hidden;
   border-radius: 8px;
-}
-
-.play-btn {
-  position: absolute;
 }

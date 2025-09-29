@@ -1,6 +1,7 @@
 import { apiKey } from "./renderBackdrop.js";
-import { genreMap } from "./renderMovieData.js";
-
+import { genreMap, getDuration } from "./renderMovieData.js";
+import { addToFavorites } from "./favorites.js";
+import { overviewModal } from "./overview.js";
 const genresContainer = document.querySelector(".genres-container");
 
 //keep track of pages + total pages per genre
@@ -20,6 +21,9 @@ const renderGenre = (genreMap) => {
     const genreName = document.createElement("h2");
     genreName.classList.add("genre-name");
     genreName.textContent = `${genreMap[key]}`;
+    // const genreNameId = (genreName.dataset.id = `${genreMap[key]}`);
+    genreName.id = `${genreMap[key]}`;
+    // console.log();
 
     const chevron = document.createElement("div");
     chevron.classList.add("fa-solid", "fa-chevron-right", "genre-chevron");
@@ -28,7 +32,9 @@ const renderGenre = (genreMap) => {
 
     //genre scroll
     const scroll = document.createElement("ul");
+
     scroll.classList.add("scroll");
+    scroll.dataset.id = key;
 
     //init state for this genre
     genreState[key] = { page: 1, totalPages: null, loading: false };
@@ -81,6 +87,23 @@ async function renderByGenre(key, container) {
   movieArray.forEach((movie) => {
     const movieContainer = document.createElement("li");
     movieContainer.classList.add("movie-li");
+    movieContainer.dataset.id = movie.id;
+    movieContainer.dataset.originalListId = container.dataset.id;
+    console.log(movieContainer.dataset.originalList);
+    //add-icon
+    // const iconContainer = document.createElement("div");
+    const addIcon = document.createElement("div");
+    addIcon.classList.add("add-icon");
+    addIcon.textContent = "Add To My Favorites";
+
+    const removeIcon = document.createElement("div");
+    removeIcon.classList.add("add-icon");
+    removeIcon.textContent = "Remove From My Favorites";
+
+    const playIcon = document.createElement("i");
+    playIcon.classList.add("fa-solid", "fa-play", "play-btn");
+    // iconContainer.classList.add("icon-container");
+    // iconContainer.append(addIcon);
 
     const containerM = document.createElement("div");
     containerM.classList.add("container-m");
@@ -89,16 +112,44 @@ async function renderByGenre(key, container) {
     moviePosterPath.classList.add("genre-poster-path");
     moviePosterPath.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${movie.poster_path})`;
 
+    const movieInfo = document.createElement("i");
+    movieInfo.classList.add("movie-info", "fa-solid", "fa-circle-info");
+
+    // movieInfo.addEventListener("click", async () => {
+    //   const dur = await getDuration(movie);
+    //   overviewModal(movie, dur, movieInfo);
+    // });
+    // const infoPopup = async () => {
+    //   const dur = await getDuration(movie);
+    //   overviewModal(movie, dur, movieInfo);
+    // };
+    // infoPopup();
+    getDuration(movie).then((data) => {
+      overviewModal(movie, data, movieInfo);
+    });
+    // movie.addEventListener("click", overviewModal(movie));
+
+    moviePosterPath.append(movieInfo, playIcon, addIcon);
+
     const movieTitle = document.createElement("div");
     movieTitle.textContent = movie.title;
     movieTitle.classList.add("movie-title");
+    movieContainer.dataset.title = `${movie.title}`;
 
     // const playBtn = document.createElement("i");
     // playBtn.classList.add("fa-solid", "fa-play play-btn");
-
+    // const movieGenres = movie.genre_ids;
     containerM.append(moviePosterPath /*,playBtn*/);
     movieContainer.append(containerM, movieTitle);
     container.append(movieContainer);
+    // const grabListId = container.dataset.id;
+
+    // console.log(grabListId);
+    addToFavorites(moviePosterPath, movieContainer, addIcon, removeIcon);
+    // const sortTitle = movie;
+    // sort(sortTitle);
+    // console.log(movie.title);
+    // console.log(movie.genre_ids);
   });
   //mark as done loading
   genreState[key].loading = false;

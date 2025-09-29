@@ -1,5 +1,6 @@
 // import { getPopularMovies } from "./popularBackdrop.js";
 import { getPopularMovies } from "./renderBackdrop.js";
+import { genreMap } from "./renderMovieData.js";
 
 const searchContainer = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
@@ -31,5 +32,18 @@ browseContainer.addEventListener("mouseleave", () => {
   overlay.classList.remove("dark-active");
   header.classList.remove("dark-header");
 });
+
+const renderGenreTab = document.querySelector(".genre-list");
+for (let value of Object.values(genreMap)) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.href = `#${value}`;
+  a.textContent = value;
+  // li.textContent = value;
+  li.append(a);
+  li.classList.add("gen-li");
+  renderGenreTab.append(li);
+  console.log;
+}
 
 getPopularMovies();

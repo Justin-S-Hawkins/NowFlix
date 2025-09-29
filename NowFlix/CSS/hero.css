@@ -3,16 +3,18 @@
 .hero-arrow-right,
 .hero-arrow-left {
   font-size: 1.9rem;
-  z-index: 10;
-  margin-top: 15rem;
+  z-index: 1;
+  margin-top: 20rem;
   transition: var(--transition-slow);
 }
 .arrows {
-  top: 4%;
-  position: absolute;
+  /* top: 4%;
+  position: absolute; */
   display: flex;
   justify-content: space-between;
-  width: 98%;
+  /* width: 98%; */
+  width: 100vw;
+  padding: 1%;
 }
 
 .hero-arrow-right:hover,

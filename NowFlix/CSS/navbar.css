@@ -112,7 +112,7 @@ header {
   right: 0;
   background-color: transparent;
   padding-bottom: 1rem;
-  z-index: 1;
+  z-index: 2;
 }
 .dark-header {
   background-color: var(--nowflix-deep-purple);

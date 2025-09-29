@@ -1,7 +1,8 @@
 import { apiKey } from "./renderBackdrop.js";
 /* Overview button */
 export const overviewBtn = document.createElement("div");
-export const overviewModal = (movie, durTxt) => {
+
+export const overviewModal = (movie, durTxt, btn) => {
   const overviewPoster = document.querySelector(".movie-poster");
 
   const overviewTitle = document.querySelector(".overview-title");
@@ -14,16 +15,19 @@ export const overviewModal = (movie, durTxt) => {
   const directedBy = document.querySelector(".directed-by");
   const closeBtn = document.querySelector(".close-modal");
   const overviewContainer = document.querySelector(".overview-container");
+  const OverviewAddBtn = document.querySelector("add-to-my-list");
+  btn.classList.add("fa-solid", "fa-message");
 
-  overviewBtn.classList.add("fa-solid", "fa-message");
-  overviewBtn.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
     overviewContainer.classList.add("active-modal");
     overviewPoster.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${movie.poster_path})`;
     overviewTitle.textContent = movie.title;
     overviewYear.textContent = movie.release_date.split("-")[0];
     overviewDur.textContent = durTxt;
     //OVERVIEW CR
-
+    // OverviewAddBtn.addEventListener("click", (movie) => {
+    //   movie.style.backgroundImage = "";
+    // });
     async function overviewRating(movieId) {
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}/release_dates?api_key=${apiKey}`
@@ -66,6 +70,7 @@ export const overviewModal = (movie, durTxt) => {
     }
     getStarringAndDirected(movie.id);
   });
+
   closeBtn.addEventListener("click", () => {
     overviewContainer.classList.remove("active-modal");
   });
