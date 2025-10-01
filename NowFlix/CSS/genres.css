@@ -26,6 +26,7 @@
 .genre-name {
   font-size: 1.7rem;
   font-weight: 700;
+  transition: var(--transition-fast);
 }
 
 .genre-poster-path {
@@ -51,15 +52,16 @@
   width: 15rem;
 } */
 .movie-li {
-  flex: 0 0 auto; /* don’t shrink, keep natural width */
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* center the poster + title */
-  gap: 0.5rem; /* smaller spacing between poster & title */
+  align-items: center;
+  gap: 0.5rem;
   padding: 0;
   margin: 0;
-  width: 15rem; /* match poster width */
+  width: 15rem;
   position: relative;
+  transition: var(--transition-fast);
 }
 
 .movie-title {
@@ -80,4 +82,36 @@
   /* height: 20rem; */
   overflow: hidden;
   border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  /* .container-m {
+    margin-top: 7rem;
+    width: 10rem;
+    height: 12rem;
+  }
+  .movie-li {
+    width: 11rem;
+  } */
+
+  .movie-li {
+    transform: scale(0.8);
+    width: 12rem;
+  }
+
+  .genre-chevron-tab {
+    transform: scale(0.8);
+    margin-left: -3.5rem;
+  }
+  .genre-name {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  /* .scroll {
+    height: 6rem;
+  } */
+  .scroll {
+    padding: 0;
+    margin: 0;
+  }
 }

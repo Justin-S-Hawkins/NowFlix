@@ -211,6 +211,10 @@ header.modal-header-bg {
   justify-content: center;
   margin-top: 10rem;
   justify-self: flex-start;
+  width: 100%;
+  padding: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .sort {
@@ -225,6 +229,6 @@ header.modal-header-bg {
 }
 .sort:hover {
   color: var(--white-outline);
-  background-color: rgba(50, 49, 49, 0.8);
+  background-color: rgba(170, 151, 151, 0.8);
   /* transform: scale(1.1); */
 }

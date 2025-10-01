@@ -2,6 +2,7 @@ import { apiKey } from "./renderBackdrop.js";
 import { genreMap, getDuration } from "./renderMovieData.js";
 import { addToFavorites } from "./favorites.js";
 import { overviewModal } from "./overview.js";
+
 const genresContainer = document.querySelector(".genres-container");
 
 //keep track of pages + total pages per genre
@@ -10,9 +11,7 @@ const genreState = {};
 const renderGenre = (genreMap) => {
   console.log(Object.keys(genreMap));
   //individual genre container
-  // const div = document.createElement("div");
-  // div.classList.add("genre-box");
-  // const genreContainer = document.querySelector(".genres-container");
+
   for (let key of Object.keys(genreMap)) {
     //genre tab
     const genreTab = document.createElement("div");
@@ -21,9 +20,8 @@ const renderGenre = (genreMap) => {
     const genreName = document.createElement("h2");
     genreName.classList.add("genre-name");
     genreName.textContent = `${genreMap[key]}`;
-    // const genreNameId = (genreName.dataset.id = `${genreMap[key]}`);
+
     genreName.id = `${genreMap[key]}`;
-    // console.log();
 
     const chevron = document.createElement("div");
     chevron.classList.add("fa-solid", "fa-chevron-right", "genre-chevron");
@@ -50,7 +48,6 @@ const renderGenre = (genreMap) => {
 
     console.log(genreMap[key]);
   }
-  // genresContainer.append(div);
 };
 renderGenre(genreMap);
 
@@ -60,19 +57,10 @@ async function renderByGenre(key, container) {
 
   const { page } = genreState[key];
 
-  // const moviesByGenre = await fetch(
-  //   `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${key}`
-  // );
-
   const response = await fetch(
     `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${key}&page=${page}`
   );
 
-  // const movie = await fetch(
-  //   `https://api.themoviedb.org/3/movie/${movieId}/release_dates?api_key=${apiKey}`
-  // );
-  // console.log(movie);
-  // const data = await moviesByGenre.json();
   const data = await response.json();
 
   //store total pages from API
@@ -82,16 +70,13 @@ async function renderByGenre(key, container) {
 
   const movieArray = data.results.slice(0, 10);
 
-  // moviePosterPath.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${.poster_path})`;
-
   movieArray.forEach((movie) => {
     const movieContainer = document.createElement("li");
     movieContainer.classList.add("movie-li");
     movieContainer.dataset.id = movie.id;
     movieContainer.dataset.originalListId = container.dataset.id;
     console.log(movieContainer.dataset.originalList);
-    //add-icon
-    // const iconContainer = document.createElement("div");
+
     const addIcon = document.createElement("div");
     addIcon.classList.add("add-icon");
     addIcon.textContent = "Add To My Favorites";
@@ -102,8 +87,6 @@ async function renderByGenre(key, container) {
 
     const playIcon = document.createElement("i");
     playIcon.classList.add("fa-solid", "fa-play", "play-btn");
-    // iconContainer.classList.add("icon-container");
-    // iconContainer.append(addIcon);
 
     const containerM = document.createElement("div");
     containerM.classList.add("container-m");
@@ -115,19 +98,9 @@ async function renderByGenre(key, container) {
     const movieInfo = document.createElement("i");
     movieInfo.classList.add("movie-info", "fa-solid", "fa-circle-info");
 
-    // movieInfo.addEventListener("click", async () => {
-    //   const dur = await getDuration(movie);
-    //   overviewModal(movie, dur, movieInfo);
-    // });
-    // const infoPopup = async () => {
-    //   const dur = await getDuration(movie);
-    //   overviewModal(movie, dur, movieInfo);
-    // };
-    // infoPopup();
     getDuration(movie).then((data) => {
       overviewModal(movie, data, movieInfo);
     });
-    // movie.addEventListener("click", overviewModal(movie));
 
     moviePosterPath.append(movieInfo, playIcon, addIcon);
 
@@ -136,20 +109,10 @@ async function renderByGenre(key, container) {
     movieTitle.classList.add("movie-title");
     movieContainer.dataset.title = `${movie.title}`;
 
-    // const playBtn = document.createElement("i");
-    // playBtn.classList.add("fa-solid", "fa-play play-btn");
-    // const movieGenres = movie.genre_ids;
-    containerM.append(moviePosterPath /*,playBtn*/);
+    containerM.append(moviePosterPath);
     movieContainer.append(containerM, movieTitle);
     container.append(movieContainer);
-    // const grabListId = container.dataset.id;
-
-    // console.log(grabListId);
     addToFavorites(moviePosterPath, movieContainer, addIcon, removeIcon);
-    // const sortTitle = movie;
-    // sort(sortTitle);
-    // console.log(movie.title);
-    // console.log(movie.genre_ids);
   });
   //mark as done loading
   genreState[key].loading = false;

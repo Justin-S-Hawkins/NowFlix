@@ -15,7 +15,6 @@ export const overviewModal = (movie, durTxt, btn) => {
   const directedBy = document.querySelector(".directed-by");
   const closeBtn = document.querySelector(".close-modal");
   const overviewContainer = document.querySelector(".overview-container");
-  const OverviewAddBtn = document.querySelector("add-to-my-list");
   btn.classList.add("fa-solid", "fa-message");
 
   btn.addEventListener("click", () => {
@@ -24,10 +23,7 @@ export const overviewModal = (movie, durTxt, btn) => {
     overviewTitle.textContent = movie.title;
     overviewYear.textContent = movie.release_date.split("-")[0];
     overviewDur.textContent = durTxt;
-    //OVERVIEW CR
-    // OverviewAddBtn.addEventListener("click", (movie) => {
-    //   movie.style.backgroundImage = "";
-    // });
+
     async function overviewRating(movieId) {
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}/release_dates?api_key=${apiKey}`
@@ -35,8 +31,6 @@ export const overviewModal = (movie, durTxt, btn) => {
       const data = await res.json();
       const usRelease = data.results.find((r) => r.iso_3166_1 === "US");
       if (usRelease.release_dates.length > 0) {
-        // console.log(usRelease.release_dates[0].certification || "NR");
-        // console.log(data.results.iso_3166_1);
         overviewCR.textContent =
           usRelease.release_dates[0].certification || "NR";
       }
@@ -57,8 +51,7 @@ export const overviewModal = (movie, durTxt, btn) => {
         `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}`
       );
       const data = await getStar.json();
-      // console.log(data.cast);
-      // const cast = data.cast.map((obj) => obj.name);
+
       const directors = data.crew
         .filter((obj) => obj.known_for_department === "Directing")
         .map((obj) => obj.name);
@@ -66,7 +59,6 @@ export const overviewModal = (movie, durTxt, btn) => {
       const limitedCast = castNames.slice(0, 10);
       starring.textContent = `Starring:  ${limitedCast}`;
       directedBy.textContent = `Directed by: ${directors}`;
-      // console.log();
     }
     getStarringAndDirected(movie.id);
   });

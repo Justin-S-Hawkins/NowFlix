@@ -20,6 +20,12 @@ body {
   position: relative;
 }
 
+.hamburger {
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
 .btn,
 i {
   border: none;
@@ -113,7 +119,40 @@ header {
   background-color: transparent;
   padding-bottom: 1rem;
   z-index: 2;
+  transition: var(--transition-slow);
 }
 .dark-header {
   background-color: var(--nowflix-deep-purple);
+}
+
+@media (max-width: 800px) {
+  .browse-container,
+  .movies,
+  .tv-shows {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+  }
+  nav {
+    /* justify-content: unset; */
+  }
+  .logo {
+    visibility: visible;
+    opacity: 1;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .search-container {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .hamburger {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.6rem;
+    background-color: rgba(253, 249, 249, 0.208);
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+    border-radius: 5px;
+  }
 }
