@@ -1,6 +1,7 @@
 .browse-container {
   position: relative;
   z-index: 1;
+  transition: var(--transition-fast);
   /* height: 3rem; */
 }
 .browse-btn-container {
@@ -8,17 +9,17 @@
   align-items: center;
   height: 3rem;
 }
+
 .browse-dropdown {
   top: 3rem;
-  left: -3rem;
+  left: -4rem;
   opacity: 0;
-  transition: all 0.4s ease-in-out;
   position: absolute;
   color: white;
   border: 1px solid var(--white-outline);
   display: flex;
   height: 30rem;
-
+  transition: var(--transition-fast);
   width: 40rem;
 
   border-radius: 10px;
@@ -39,7 +40,21 @@
 /* {
   color: var(--nowflix-yellow);
 } */
-
+/* .close-hamburger {
+  visibility: hidden;
+  opacity: 0;
+} */
+.hammy-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.hamburger-close-text,
+.close-hamburger {
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  /* display: none; */
+}
 .browse-container:hover .chevron-indicator {
   transform: rotate(180deg);
 }
@@ -57,9 +72,9 @@
 
 /*inside dropdown*/
 .browse-dropdown::before {
+  position: absolute;
   top: -0.6rem;
   left: 5rem;
-  position: absolute;
   content: "";
   width: 1rem;
   height: 1rem;

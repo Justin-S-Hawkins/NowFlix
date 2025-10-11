@@ -14,13 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="CSS/navbar.css" />
+
     <link rel="stylesheet" href="CSS/browse.css" />
+    <!-- <link rel="stylesheet" href="CSS/navbar.css" /> -->
     <link rel="stylesheet" href="CSS/base.css" />
     <link rel="stylesheet" href="CSS/hero.css" />
     <link rel="stylesheet" href="CSS/genres.css" />
     <link rel="stylesheet" href="CSS/overviewModal.css" />
     <link rel="stylesheet" href="CSS/favorites.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
     <title>NowFlix</title>
   </head>
   <body>
@@ -30,6 +33,7 @@
       <nav class="nav">
         <div class="nav-left">
           <i class="fa-solid fa-bars hamburger"></i>
+
           <div class="logo">NowFlix</div>
           <div class="browse-container">
             <div class="browse-btn-container">
@@ -39,9 +43,16 @@
 
             <div class="browse-dropdown">
               <div class="browse-dropdown-left">
+                <div class="hammy-container">
+                  <span>
+                    <i class="fa-solid fa-circle-xmark close-hamburger"></i
+                  ></span>
+                  <span class="hamburger-close-text">close</span>
+                </div>
                 <div class="tabs-gen">
-                  <button class="btn genres">genres</button
+                  <button class="btn genres">Genres</button
                   ><i class="fa-solid fa-chevron-right"></i>
+
                   <div class="left-dropdown">
                     <ul class="genre-list"></ul>
                   </div>
@@ -151,20 +162,94 @@
       <div class="genres-container"></div>
     </section>
 
+    <footer>
+      <div class="footer-container">
+        <div class="footer-header">
+          <h2>Nowflix</h2>
+          <div class="social-icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+
+        <div class="footer-top">
+          <div class="link">
+            <ul class="footer-company">
+              <h2>COMPANY</h2>
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="link">
+            <ul class="footer-support">
+              <h2>SUPPORT</h2>
+              <li>Contact Support</li>
+              <li>Help Center</li>
+              <li>Supported Devices</li>
+              <li>Activate Your Device</li>
+              <li>Accessibility</li>
+            </ul>
+          </div>
+          <div class="link">
+            <ul class="footer-partners">
+              <h2>PARTNERS</h2>
+              <li>Advertise with Us</li>
+              <li>Partner with Us</li>
+            </ul>
+          </div>
+          <div class="link">
+            <ul class="get-apps">
+              <h2>GET THE APPS</h2>
+              <li>IOS</li>
+              <li>Android</li>
+              <li>Roku</li>
+              <li>Amazon Fire</li>
+            </ul>
+          </div>
+          <div class="link">
+            <ul class="press">
+              <h2>PRESS</h2>
+              <li>Press Releases</li>
+              <li>Nowflix in the News</li>
+            </ul>
+          </div>
+          <div class="link">
+            <ul class="legal">
+              <h2>LEGAL</h2>
+              <li>Privacy Policy (Updated)</li>
+              <li>Terms of Use (Updated)</li>
+              <li>Your Privacy Choices</li>
+              <li>Cookies</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="hr" />
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Nowflix, Inc.</p>
+        <p>Nowflix is a registered trademark of Nowflix, Inc.</p>
+        <p>All rights reserved.</p>
+        <p>Device ID: some sort of device hopefully an apple lol</p>
+      </div>
+      <img src="" alt="" />
+    </footer>
+
     <script
       src="https://kit.fontawesome.com/a3b6dc3996.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="nav.js"></script> -->
+
     <script type="module" src="JS/main.js"></script>
     <script type="module" src="JS/renderGenres.js"></script>
     <script type="module" src="JS/favorites.js"></script>
   </body>
 </html>
-
 <!-- <div class="overview-container">
   <div class="movie-overview">
-    <div class="movie-poster"></div>
+    <div class="movie-poster"></div>https://www.microsoft.com/store/apps/9N1SV6841F0B?cid=web-footer-badge
     <div class="like-container">
       <div class="like"></div>
       <div class="dislike"></div>

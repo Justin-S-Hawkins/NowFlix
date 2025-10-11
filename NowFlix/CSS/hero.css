@@ -149,6 +149,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-top: 10%;
 }
 
 .dot {
@@ -191,7 +192,7 @@
 
 @media (max-width: 880px) {
   .dots-container {
-    margin-top: 7rem;
+    margin-top: 30%;
   }
 }
 @media (max-width: 600px) {

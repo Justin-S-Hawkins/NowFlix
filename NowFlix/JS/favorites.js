@@ -1,3 +1,4 @@
+import { closeHamburgerFunction } from "./main.js";
 const favoritesTab = document.querySelector(".favorites");
 const favoriteModal = document.querySelector(".favorite-collection");
 const favUl = document.querySelector(".favorite-list");
@@ -12,6 +13,7 @@ favoritesTab.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   favoriteModal.classList.remove("active-modal-fav");
   header.classList.remove("modal-header-bg");
+  closeHamburgerFunction();
 });
 movieNav.addEventListener("click", () => {
   favoriteModal.classList.remove("active-modal-fav");

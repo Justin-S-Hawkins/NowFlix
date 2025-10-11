@@ -1,7 +1,7 @@
 .tabs-col:hover,
 .tabs-gen:hover,
 .col-li:hover,
-.gen-li:hover a {
+.gen-li:hover > a {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
 }
@@ -213,7 +213,7 @@ header.modal-header-bg {
   justify-self: flex-start;
   width: 100%;
   padding: 0;
-  margin-left: 1rem;
+  margin-left: x 1rem;
   margin-right: 1rem;
 }
 

@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=uy1tgKOnPB0
+
 // backdropRender(movies[currentIndex]);
 // rightArrow.addEventListener("click", () => {
 //   currentIndex =

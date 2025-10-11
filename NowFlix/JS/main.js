@@ -16,6 +16,14 @@ document.addEventListener("click", (e) => {
     searchContainer.style.width = "53px";
   }
 });
+export const closeHamburgerFunction = () => {
+  browseDropdown.classList.remove("translate-dropdown");
+  searchContainer.classList.remove("show");
+  hammyText.classList.remove("show");
+  signIn.classList.remove("hide");
+  register.classList.remove("hide");
+  logo.classList.remove("hide");
+};
 
 /*use "mouseenter" instead of "click" to make the background appear deep purple */
 
@@ -33,11 +41,13 @@ const renderGenreTab = document.querySelector(".genre-list");
 for (let value of Object.values(genreMap)) {
   const li = document.createElement("li");
   const a = document.createElement("a");
+  li.classList.add("gen-li");
   a.href = `#${value}`;
   a.textContent = value;
   li.append(a);
-  li.classList.add("gen-li");
+
   renderGenreTab.append(li);
+  li.addEventListener("click", closeHamburgerFunction);
   console.log;
 }
 const homeBtnContainer = document.createElement("div");
@@ -56,5 +66,26 @@ window.addEventListener("scroll", () => {
     homeBtnContainer.classList.remove("show");
   }
 });
+const browseDropdown = document.querySelector(".browse-dropdown");
+const hamburger = document.querySelector(".hamburger");
+// const closeHamburger = document.querySelector(".close-hamburger");
+const closeHamburger = document.querySelector(".hammy-container");
+const signIn = document.querySelector(".sign-in-btn");
+const register = document.querySelector(".register-btn");
+const logo = document.querySelector(".logo");
+const hammyText = document.querySelector(".hamburger-close-text");
+hamburger.addEventListener("click", () => {
+  // browseDropdown.style.translate = "unset";
+  browseDropdown.classList.add("translate-dropdown");
+  hammyText.classList.add("show");
+  searchContainer.classList.add("show");
+  signIn.classList.add("hide");
+  register.classList.add("hide");
+  logo.classList.add("hide");
+});
 
 getPopularMovies();
+
+closeHamburger.addEventListener("click", closeHamburgerFunction);
+
+closeHamburgerFunction();
