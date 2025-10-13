@@ -53,6 +53,7 @@
   opacity: 0;
   visibility: hidden;
   color: white;
+
   /* display: none; */
 }
 .browse-container:hover .chevron-indicator {

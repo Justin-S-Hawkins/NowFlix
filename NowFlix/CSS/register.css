@@ -1,0 +1,195 @@
+body {
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  background-image: linear-gradient(rgb(67, 8, 120), rgb(9, 0, 24) 40%);
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  color: white;
+
+  font-weight: 500;
+}
+a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.register-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  align-items: center;
+  margin-top: 0;
+}
+.nowflix-logo-register,
+.footer-header > .nowflix-logo-register {
+  font-size: 1.5rem;
+  color: rgb(255, 254, 63);
+  text-decoration: none;
+}
+.sign-in {
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 20rem;
+  gap: 0.8rem;
+  margin: auto;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}
+.envelope {
+  padding: 1rem;
+  background-color: transparent;
+  font-size: 1.3rem;
+  border: 2px solid rgba(255, 255, 255, 0.224);
+  border-radius: 50%;
+}
+.intro-text {
+  text-align: center;
+}
+.intro-text > h2 {
+  font-size: 2.3rem;
+  margin: 0;
+  padding-bottom: 0;
+  word-spacing: -0.3rem;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+.intro-text > p {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.583);
+  /* font-size: 1rem; */
+}
+.img-container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  /* justify-content: center; */
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.img-container > p {
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.google-or-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  gap: 0.8rem;
+}
+
+.google-img {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 2rem;
+}
+.or-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.3rem;
+}
+.or-container > p {
+  font-size: 0.64rem;
+  color: rgba(255, 255, 255, 0.556);
+}
+.or-container > div {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.556);
+}
+.submission-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.8rem;
+}
+.input-section > h3 {
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+.input {
+  background-color: transparent;
+  width: 100%;
+  height: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.302);
+  border-radius: 8px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+
+  /* padding-left: 1rem; */
+}
+.input:focus {
+  background-color: rgba(255, 255, 255, 0.136);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.input::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  color: rgba(224, 222, 222, 0.803);
+}
+.input:focus::placeholder {
+  color: white;
+}
+.input:hover::placeholder {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.input:hover {
+  color: rgba(255, 255, 255, 0.88);
+  border-color: rgba(255, 255, 255, 0.512);
+  /* background-color: rgba(255, 255, 255, 0.136); */
+}
+
+.next-container {
+  background-color: rgb(58, 51, 70);
+  width: 100%;
+  border-radius: 8px;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  height: 3rem;
+}
+.next-text {
+  text-align: center;
+}
+.terms-of-use {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.556);
+  text-align: center;
+}
+.highlight {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

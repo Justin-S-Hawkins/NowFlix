@@ -7,8 +7,8 @@ footer {
   /* position: absolute; */
   /* bottom: 0; */
   color: white;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 ul > h2 {
   color: rgb(189, 186, 186);
@@ -16,12 +16,13 @@ ul > h2 {
 .footer-header {
   display: flex;
   justify-content: space-between;
+  padding-top: 2rem;
 }
 .footer-header > h2,
 .social-icons {
   border-bottom: 2px solid rgb(43, 41, 52);
   width: 25%;
-  padding-bottom: 2rem;
+  /* padding-bottom: 1rem; */
   margin-bottom: 0;
 }
 
@@ -50,7 +51,7 @@ ul > h2 {
   gap: 0.5rem;
 }
 .social-icons > i {
-  color: rgb(189, 186, 186);
+  color: rgb(255, 255, 255);
 }
 .footer-header > h2 {
   color: var(--nowflix-yellow);
