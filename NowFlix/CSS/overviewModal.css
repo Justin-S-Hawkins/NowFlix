@@ -16,14 +16,17 @@
 }
 .overview-container {
   position: fixed;
+  margin: auto;
+  top: 5%;
+  left: 5%;
   z-index: 2;
   width: 90%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   height: 90%;
   /* inset: 0; */
   overflow: auto;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
   background-image: linear-gradient(to bottom, rgb(40, 5, 64), rgb(15, 1, 24));
   visibility: hidden;
   opacity: 0;
@@ -263,6 +266,7 @@ hr {
     max-height: 50rem;
     text-align: center;
   }
+
   .movie-info-linear {
     margin-left: 2rem;
     /* text-align: center; */

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="CSS/favorites.css" />
     <link rel="stylesheet" href="CSS/navbar.css" />
     <link rel="stylesheet" href="CSS/footer.css" />
+    <link rel="stylesheet" href="CSS/movieModal.css" />
     <title>NowFlix</title>
   </head>
   <body>
@@ -107,46 +108,55 @@
     </section>
 
     <!-- MOVIE OVERVIEW SECTION-->
-    <section class="overview-container">
-      <i class="fa-solid fa-xmark close-modal"></i>
-      <div class="movie-overview">
-        <div class="movie-poster"></div>
-        <div class="like-container">
-          <div class="like overview-btns">
-            <i class="fa-regular fa-thumbs-up"></i>
+    <div class="overview-position">
+      <section class="overview-container">
+        <i class="fa-solid fa-xmark close-modal"></i>
+        <div class="movie-overview">
+          <div class="movie-poster"></div>
+          <div class="like-container">
+            <div class="like overview-btns">
+              <i class="fa-regular fa-thumbs-up"></i>
+            </div>
+            <div class="dislike overview-btns">
+              <i class="fa-regular fa-thumbs-down"></i>
+            </div>
           </div>
-          <div class="dislike overview-btns">
-            <i class="fa-regular fa-thumbs-down"></i>
+          <div class="add-to-my-list overview-btns">Add to My List</div>
+          <div class="share-container">
+            <div class="share overview-btns">Share</div>
+            <div class="report-problem overview-btns">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
           </div>
         </div>
-        <div class="add-to-my-list overview-btns">Add to My List</div>
-        <div class="share-container">
-          <div class="share overview-btns">Share</div>
-          <div class="report-problem overview-btns">
-            <i class="fa-solid fa-ellipsis"></i>
-          </div>
-        </div>
-      </div>
 
-      <div class="movie-info-overview">
-        <h2 class="overview-title"></h2>
-        <div class="movie-info-linear">
-          <span class="overview-year"></span>
-          <span class="overview-dur"></span>
-          <span class="overview-cc">
-            <i class="fa-solid fa-closed-captioning"></i
-          ></span>
-          <span class="overview-content-rating"></span>
+        <div class="movie-info-overview">
+          <h2 class="overview-title"></h2>
+          <div class="movie-info-linear">
+            <span class="overview-year"></span>
+            <span class="overview-dur"></span>
+            <span class="overview-cc">
+              <i class="fa-solid fa-closed-captioning"></i
+            ></span>
+            <span class="overview-content-rating"></span>
+          </div>
+          <div class="description-container">
+            <div class="movie-description"></div>
+            <div class="language"></div>
+            <div class="starring"></div>
+            <div class="directed-by"></div>
+            <hr />
+          </div>
         </div>
-        <div class="description-container">
-          <div class="movie-description"></div>
-          <div class="language"></div>
-          <div class="starring"></div>
-          <div class="directed-by"></div>
-          <hr />
-        </div>
+      </section>
+    </div>
+
+    <div class="movie-modal">
+      <div class="movie-box">
+        <div class="movie-name"></div>
       </div>
-    </section>
+    </div>
+    <!-- favorite-collection -->
     <section class="collection-section">
       <div class="favorite-collection">
         <i class="fa-solid fa-xmark close-modal-fav"></i>
@@ -162,80 +172,82 @@
       <div class="genres-container"></div>
     </section>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-header">
-          <h2>Nowflix</h2>
-          <div class="social-icons">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
+    <div class="footer-position">
+      <footer>
+        <div class="footer-container">
+          <div class="footer-header">
+            <h2>Nowflix</h2>
+            <div class="social-icons">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
           </div>
-        </div>
 
-        <div class="footer-top">
-          <div class="link">
-            <ul class="footer-company">
-              <h2>COMPANY</h2>
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
+          <div class="footer-top">
+            <div class="link">
+              <ul class="footer-company">
+                <h2>COMPANY</h2>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div class="link">
+              <ul class="footer-support">
+                <h2>SUPPORT</h2>
+                <li>Contact Support</li>
+                <li>Help Center</li>
+                <li>Supported Devices</li>
+                <li>Activate Your Device</li>
+                <li>Accessibility</li>
+              </ul>
+            </div>
+            <div class="link">
+              <ul class="footer-partners">
+                <h2>PARTNERS</h2>
+                <li>Advertise with Us</li>
+                <li>Partner with Us</li>
+              </ul>
+            </div>
+            <div class="link">
+              <ul class="get-apps">
+                <h2>GET THE APPS</h2>
+                <li>IOS</li>
+                <li>Android</li>
+                <li>Roku</li>
+                <li>Amazon Fire</li>
+              </ul>
+            </div>
+            <div class="link">
+              <ul class="press">
+                <h2>PRESS</h2>
+                <li>Press Releases</li>
+                <li>Nowflix in the News</li>
+              </ul>
+            </div>
+            <div class="link">
+              <ul class="legal">
+                <h2>LEGAL</h2>
+                <li>Privacy Policy (Updated)</li>
+                <li>Terms of Use (Updated)</li>
+                <li>Your Privacy Choices</li>
+                <li>Cookies</li>
+              </ul>
+            </div>
           </div>
-          <div class="link">
-            <ul class="footer-support">
-              <h2>SUPPORT</h2>
-              <li>Contact Support</li>
-              <li>Help Center</li>
-              <li>Supported Devices</li>
-              <li>Activate Your Device</li>
-              <li>Accessibility</li>
-            </ul>
-          </div>
-          <div class="link">
-            <ul class="footer-partners">
-              <h2>PARTNERS</h2>
-              <li>Advertise with Us</li>
-              <li>Partner with Us</li>
-            </ul>
-          </div>
-          <div class="link">
-            <ul class="get-apps">
-              <h2>GET THE APPS</h2>
-              <li>IOS</li>
-              <li>Android</li>
-              <li>Roku</li>
-              <li>Amazon Fire</li>
-            </ul>
-          </div>
-          <div class="link">
-            <ul class="press">
-              <h2>PRESS</h2>
-              <li>Press Releases</li>
-              <li>Nowflix in the News</li>
-            </ul>
-          </div>
-          <div class="link">
-            <ul class="legal">
-              <h2>LEGAL</h2>
-              <li>Privacy Policy (Updated)</li>
-              <li>Terms of Use (Updated)</li>
-              <li>Your Privacy Choices</li>
-              <li>Cookies</li>
-            </ul>
-          </div>
+          <hr class="hr" />
         </div>
-        <hr class="hr" />
-      </div>
-      <div class="footer-bottom">
-        <p>Copyright © 2025 Nowflix, Inc.</p>
-        <p>Nowflix is a registered trademark of Nowflix, Inc.</p>
-        <p>All rights reserved.</p>
-        <p>Device ID: some sort of device hopefully an apple lol</p>
-      </div>
-      <img src="" alt="" />
-    </footer>
+        <div class="footer-bottom">
+          <p>Copyright © 2025 Nowflix, Inc.</p>
+          <p>Nowflix is a registered trademark of Nowflix, Inc.</p>
+          <p>All rights reserved.</p>
+          <p>Device ID: some sort of device hopefully an apple lol</p>
+        </div>
+        <img src="" alt="" />
+      </footer>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/a3b6dc3996.js"
@@ -245,6 +257,7 @@
     <script type="module" src="JS/main.js"></script>
     <script type="module" src="JS/renderGenres.js"></script>
     <script type="module" src="JS/favorites.js"></script>
+    <script type="module" src="JS/movieModal.js"></script>
   </body>
 </html>
 <!-- <div class="overview-container">

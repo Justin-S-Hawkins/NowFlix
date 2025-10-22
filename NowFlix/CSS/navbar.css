@@ -119,11 +119,16 @@ header {
   right: 0;
   background-color: transparent;
   padding-bottom: 1rem;
-  z-index: 2;
+  z-index: 10;
   transition: var(--transition-slow);
 }
 .dark-header {
   background-color: var(--nowflix-deep-purple);
+}
+.dark-header-movie {
+  position: fixed;
+  background-color: var(--nowflix-deep-purple);
+  padding-bottom: 0;
 }
 
 /* .close-container > span {
@@ -159,6 +164,7 @@ header {
     opacity: 1;
     margin-right: 0;
     padding-right: 0;
+    cursor: pointer;
   }
 
   .search-container {
@@ -173,6 +179,10 @@ header {
   .hamburger-close-text.show {
     visibility: visible;
     opacity: 1;
+  }
+  .hammy-container {
+    display: flex;
+    align-items: center;
   }
   .nav-right {
     position: absolute;

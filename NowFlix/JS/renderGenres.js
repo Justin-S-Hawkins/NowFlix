@@ -2,6 +2,7 @@ import { apiKey } from "./renderBackdrop.js";
 import { genreMap, getDuration } from "./renderMovieData.js";
 import { addToFavorites } from "./favorites.js";
 import { overviewModal } from "./overview.js";
+import { playMovie } from "./movieModal.js";
 
 const genresContainer = document.querySelector(".genres-container");
 
@@ -100,6 +101,7 @@ async function renderByGenre(key, container) {
 
     getDuration(movie).then((data) => {
       overviewModal(movie, data, movieInfo);
+      playMovie(movie, data, playIcon);
     });
 
     moviePosterPath.append(movieInfo, playIcon, addIcon);
