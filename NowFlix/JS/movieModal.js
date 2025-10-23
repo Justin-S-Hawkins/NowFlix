@@ -4,7 +4,7 @@ const movieModal = document.querySelector(".movie-modal");
 const movieName = document.querySelector(".movie-name");
 const overviewPosition = document.querySelector(".overview-position");
 const overviewContainer = document.querySelector(".overview-container");
-const footerPosition = document.querySelector(".footer-position");
+export const footerPosition = document.querySelector(".footer-position");
 const footer = document.querySelector("footer");
 const logo = document.querySelector(".logo");
 const header = document.querySelector("header");
@@ -24,3 +24,6 @@ logo.addEventListener("click", () => {
   overviewPosition.append(overviewContainer);
   footerPosition.append(footer);
 });
+
+// const endTime = document.querySelector(".end-time");
+// endTime.textContent = movie.durText;

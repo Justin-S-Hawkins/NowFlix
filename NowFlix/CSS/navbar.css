@@ -127,7 +127,7 @@ header {
 }
 .dark-header-movie {
   position: fixed;
-  background-color: var(--nowflix-deep-purple);
+  /* background-color: var(--nowflix-deep-purple); */
   padding-bottom: 0;
 }
 

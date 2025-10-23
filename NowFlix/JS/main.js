@@ -4,8 +4,9 @@ import { genreMap } from "./renderMovieData.js";
 const searchContainer = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 const browseContainer = document.querySelector(".browse-container");
-const header = document.querySelector("header");
+export const header = document.querySelector("header");
 const body = document.querySelector("body");
+export const footer = document.querySelector("footer");
 /*search stays open when clicked*/
 searchContainer.addEventListener("click", () => {
   searchContainer.style.width = "340px";
@@ -72,7 +73,7 @@ const hamburger = document.querySelector(".hamburger");
 const closeHamburger = document.querySelector(".hammy-container");
 const signIn = document.querySelector(".sign-in-btn");
 const register = document.querySelector(".register-btn");
-const logo = document.querySelector(".logo");
+export const logo = document.querySelector(".logo");
 const hammyText = document.querySelector(".hamburger-close-text");
 hamburger.addEventListener("click", () => {
   // browseDropdown.style.translate = "unset";
@@ -83,6 +84,14 @@ hamburger.addEventListener("click", () => {
   register.classList.add("hide");
   logo.classList.add("hide");
 });
+
+// window.addEventListener(scroll, () => {
+//   if (window.scrollY > 1) {
+//     header.classList.add("dark-header-movie");
+//   } else {
+//     header.classList.remove("dark-header-movie");
+//   }
+// });
 
 getPopularMovies();
 

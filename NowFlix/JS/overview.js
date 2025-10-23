@@ -24,6 +24,9 @@ export const overviewModal = (movie, durTxt, btn) => {
     overviewYear.textContent = movie.release_date.split("-")[0];
     overviewDur.textContent = durTxt;
 
+    const endTime = document.querySelector(".end-time");
+    endTime.textContent = durTxt;
+
     async function overviewRating(movieId) {
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}/release_dates?api_key=${apiKey}`

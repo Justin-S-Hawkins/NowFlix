@@ -24,10 +24,9 @@
   width: 90%;
   height: 40rem;
   background-image: linear-gradient(
-    to bottom,
-    rgba(102, 101, 101, 0.55) -200%,
+    /* to bottom, */ rgba(102, 101, 101, 0.55)-100%,
     rgba(0, 0, 0, 0.9) 50%,
-    rgba(102, 101, 101, 0.55) 300%
+    rgba(102, 101, 101, 0.55) 150%
   );
   margin: auto;
   margin-top: 6rem;
@@ -69,6 +68,57 @@
 }
 .movie-modal > footer {
   margin-top: 6rem;
+}
+/* .material-icons {
+  color: white;
+} */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 28rem;
+  margin: auto;
+}
+.progress-bar {
+  width: 100%;
+  /* margin: auto; */
+  height: 0.8rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.399);
+}
+.controls {
+  margin-top: 2rem;
+}
+
+.controls,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-bottom: 0.5rem;
+}
+.start-time,
+.end-time {
+  font-weight: 500;
+}
+.controls-left,
+.controls-right {
+  display: flex;
+  gap: 1.5rem;
+}
+.controls-left > i,
+.controls-right > i {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  transition: all 0.1s ease-in;
+  position: relative;
+  z-index: 10;
+}
+.controls-left > i:hover,
+.controls-right > i:hover {
+  color: var(--nowflix-yellow);
 }
 
 /* .nav.movie {

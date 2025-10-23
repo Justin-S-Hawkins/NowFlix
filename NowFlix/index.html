@@ -14,7 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="CSS/browse.css" />
     <!-- <link rel="stylesheet" href="CSS/navbar.css" /> -->
     <link rel="stylesheet" href="CSS/base.css" />
@@ -150,10 +153,32 @@
         </div>
       </section>
     </div>
-
+    <!-- MOVIE MODAL  -->
     <div class="movie-modal">
       <div class="movie-box">
         <div class="movie-name"></div>
+        <div class="controls-container">
+          <div class="time-container">
+            <div class="time">
+              <div class="start-time">00:00</div>
+              <div class="end-time"></div>
+            </div>
+            <div class="progress-bar"></div>
+          </div>
+          <div class="controls">
+            <div class="controls-left">
+              <i class="fa-solid fa-play"></i>
+              <i class="fa-solid fa-rotate-left"></i>
+              <i class="fa-solid fa-rotate-right"></i>
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <div class="controls-right">
+              <i class="fa-regular fa-message"></i>
+              <i class="fa-solid fa-minimize"></i>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- favorite-collection -->
@@ -171,6 +196,20 @@
     <section class="genres-section">
       <div class="genres-container"></div>
     </section>
+
+    <!-- GENRE MODAL -->
+    <div class="genre-modal-container">
+      <div class="modal-top">
+        <div class="genre-modal-name"></div>
+        <div class="genre-modal-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem officia dolorem magnam impr. Molestias, laboriosam
+          vitae dei!
+        </div>
+      </div>
+      <hr class="genre-hr" />
+      <div class="genre-movies"></div>
+    </div>
 
     <div class="footer-position">
       <footer>

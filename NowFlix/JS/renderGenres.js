@@ -2,9 +2,12 @@ import { apiKey } from "./renderBackdrop.js";
 import { genreMap, getDuration } from "./renderMovieData.js";
 import { addToFavorites } from "./favorites.js";
 import { overviewModal } from "./overview.js";
-import { playMovie } from "./movieModal.js";
+import { playMovie, footerPosition } from "./movieModal.js";
+import { logo, header, footer } from "./main.js";
 
 const genresContainer = document.querySelector(".genres-container");
+const genreModalContainer = document.querySelector(".genre-modal-container");
+const genreModalName = document.querySelector(".genre-modal-name");
 
 //keep track of pages + total pages per genre
 const genreState = {};
@@ -21,6 +24,15 @@ const renderGenre = (genreMap) => {
     const genreName = document.createElement("h2");
     genreName.classList.add("genre-name");
     genreName.textContent = `${genreMap[key]}`;
+
+    genreTab.addEventListener("click", () => {
+      genreModalContainer.classList.add("active");
+      genreModalContainer.append(footer);
+      genreModalName.textContent = `${genreMap[key]}`;
+      header.classList.add("dark-header-movie");
+
+      console.log(genreMap[key]);
+    });
 
     genreName.id = `${genreMap[key]}`;
 
@@ -64,7 +76,7 @@ async function renderByGenre(key, container) {
 
   const data = await response.json();
 
-  //store total pages from API
+  //store total pages from the Movie APi
   if (!genreState[key].totalPages) {
     genreState[key].totalPages = data.total_pages;
   }
@@ -148,3 +160,9 @@ function handleScroll(key, container) {
     renderByGenre(key, container);
   }
 }
+// console.log(genreTab);
+logo.addEventListener("click", () => {
+  genreModalContainer.classList.remove("active");
+  header.classList.remove(".dark-header-movie");
+  footerPosition.append("footer");
+});
