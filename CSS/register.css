@@ -193,3 +193,7 @@ ul {
   font-weight: 600;
   cursor: pointer;
 }
+
+.password {
+  margin-bottom: 2rem;
+}
