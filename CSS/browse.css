@@ -97,6 +97,7 @@
   border-top-left-radius: 10px;
   /* position: relative;
   z-index: 1000; */
+  /* height: 100vh; */
 }
 .browse-dropdown-right {
   border-bottom-right-radius: 10px;
