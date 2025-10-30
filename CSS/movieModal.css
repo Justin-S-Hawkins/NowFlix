@@ -1,0 +1,163 @@
+.movie-modal {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgb(9, 0, 24) -10%,
+    rgb(67, 8, 120),
+    rgb(9, 0, 24)
+  );
+  transition: var(--transition-fast);
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.movie-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+.movie-box {
+  width: 90%;
+  height: 40rem;
+  background-image: linear-gradient(
+    /* to bottom, */ rgba(102, 101, 101, 0.55)-100%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(102, 101, 101, 0.55) 150%
+  );
+  margin: auto;
+  margin-top: 6rem;
+}
+.movie-name {
+  font-size: 2.5rem;
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  color: white;
+}
+
+.movie-modal > .overview-container {
+  border: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: auto;
+  overflow: unset;
+  background-image: unset;
+  width: 90%;
+  margin-top: -2rem;
+  transform: scale(1.1);
+  padding: 0;
+}
+.movie-modal > .overview-container > .movie-info-overview {
+  /* overflow: unset; */
+  display: block;
+  width: 69%;
+  margin-top: 2rem;
+
+  /* height: 20rem; */
+}
+/* .movie-modal > .overview-container > .movie-overview {
+  width: 90%;
+} */
+.movie-modal > .overview-container > .close-modal {
+  display: none;
+}
+.movie-modal > footer {
+  margin-top: 6rem;
+}
+/* .material-icons {
+  color: white;
+} */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 28rem;
+  margin: auto;
+}
+.progress-bar {
+  width: 100%;
+  /* margin: auto; */
+  height: 0.8rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.399);
+}
+.controls {
+  margin-top: 2rem;
+}
+
+.controls,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-bottom: 0.5rem;
+}
+.start-time,
+.end-time {
+  font-weight: 500;
+}
+.controls-left,
+.controls-right {
+  display: flex;
+  gap: 1.5rem;
+}
+.controls-left > i,
+.controls-right > i {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  transition: all 0.1s ease-in;
+  position: relative;
+  z-index: 10;
+}
+.controls-left > i:hover,
+.controls-right > i:hover {
+  color: var(--nowflix-yellow);
+}
+
+/* .nav.movie {
+  position: fixed;
+  justify-content: space-between;
+} */
+@media (max-width: 600px) {
+  .movie-modal > .overview-container {
+    border: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    overflow: unset;
+    background-image: unset;
+    width: 90%;
+    transform: scale(1);
+    padding: 0;
+  }
+  .movie-modal > .overview-container > .movie-overview > .movie-poster {
+    display: none;
+  }
+  .movie-modal > .overview-container > .movie-overview {
+    width: 90%;
+    height: 100%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .movie-modal > .overview-container > .movie-info-overview {
+    margin-top: 14rem;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 35rem;
+  }
+  .movie-modal
+    > .overview-container
+    > .movie-info-overview
+    > .movie-info-linear {
+    margin-left: 10rem;
+  }
+}

@@ -1,0 +1,329 @@
+/*Nav*/
+* {
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+}
+body {
+  background-color: rgba(18, 5, 28, 1);
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+}
+
+/*hero container font style to display movie title */
+
+.logo {
+  color: var(--nowflix-yellow);
+  font-size: 1.7rem;
+  font-weight: 900;
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.hamburger {
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.btn,
+i {
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: fit-content;
+}
+
+.btn:hover {
+  color: var(--nowflix-yellow);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  align-content: center;
+  align-items: center;
+}
+
+.nav-left {
+  z-index: 5;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.tv-shows {
+  width: 6rem;
+}
+
+.btn.register-btn {
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  background-color: white;
+  color: var(--nowflix-deep-purple);
+  border-radius: 10px;
+}
+.btn.help-btn {
+  font-size: 14px;
+  padding: 0.12rem 0.48rem 0.12rem 0.48rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+}
+.btn.sign-in-btn {
+  color: white;
+}
+.btn.help-btn,
+.btn.sign-in-btn,
+.btn.register-btn {
+  transition: var(--transition-fast);
+}
+
+.search-container {
+  border: 1px solid var(--white-outline);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5rem;
+  width: 53px;
+  overflow: hidden;
+  transition: var(--transition-slow);
+}
+.search-container > i {
+  font-size: 1.35rem;
+}
+
+#search {
+  background: transparent;
+  border: none;
+  outline: none;
+  caret-color: white;
+  color: white;
+  width: 100%;
+  font-weight: 500;
+  line-height: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.genre-active {
+  color: white;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding-bottom: 1rem;
+  z-index: 10;
+  transition: var(--transition-slow);
+}
+.dark-header {
+  background-color: var(--nowflix-deep-purple);
+}
+.dark-header-movie {
+  position: fixed;
+  /* background-color: var(--nowflix-deep-purple); */
+  padding-bottom: 0;
+}
+
+/* .close-container > span {
+  display: none;
+} */
+@media (max-width: 800px) {
+  .browse-dropdown-left .tabs-gen:hover,
+  .browse-dropdown-left .tabs-col:hover {
+    background-color: transparent;
+  }
+  .browse-btn,
+  .chevron-indicator,
+  .movies,
+  .tv-shows {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .browse-container:hover .browse-btn,
+  .browse-container:hover .chevron-indicator {
+    visibility: hidden;
+    opacity: 0;
+  }
+  /* .nav-left {
+    visibility: hidden;
+  } */
+  .close-hamburger {
+    visibility: visible;
+    opacity: 1;
+  }
+  .logo {
+    visibility: visible;
+    opacity: 1;
+    margin-right: 0;
+    padding-right: 0;
+    cursor: pointer;
+  }
+
+  .search-container {
+    visibility: hidden;
+    opacity: 0;
+    padding: 0.5rem 1rem 0.5rem 0.9rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .search-container.show,
+  .help-btn,
+  .hamburger-close-text.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  .hammy-container {
+    display: flex;
+    align-items: center;
+  }
+  .nav-right {
+    position: absolute;
+    z-index: 100;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .register-btn.hide,
+  .sign-in-btn.hide,
+  .logo.hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .browse-container {
+    position: absolute;
+    top: 0;
+
+    /* left: -0.5rem; */
+  }
+
+  .browse-dropdown::before {
+    content: unset;
+  }
+  .browse-dropdown.translate-dropdown {
+    translate: unset;
+  }
+  .browse-dropdown {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    left: -1rem;
+    /* z-index: 10; */
+    top: 0;
+    margin: 0;
+    translate: -100%;
+    width: 100vw;
+    transition: var(--transition-slow);
+    border-radius: 0;
+    /* 
+    position: fixed; */
+  }
+  .tabs-col,
+  .tabs-gen {
+    display: flex;
+    flex-direction: column;
+  }
+  .genres:hover,
+  .collections:hover {
+    color: white;
+  }
+  .tabs-col > i,
+  .tabs-gen > i {
+    visibility: hidden;
+  }
+
+  .tabs-col .right-dropdown,
+  .tabs-gen .left-dropdown {
+    visibility: visible;
+    opacity: 1;
+    position: unset;
+  }
+  .browse-dropdown-right {
+    width: 0;
+  }
+  .browse-dropdown-left {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+    /* border-radius: 8px; */
+  }
+  .tabs-gen.left-dropdown.genre-list {
+    overflow: unset;
+  }
+  .hamburger {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.6rem;
+    background-color: rgba(253, 249, 249, 0.208);
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+    border-radius: 5px;
+  }
+  .hamburger:hover {
+    background-color: rgba(152, 116, 225, 0.451);
+    cursor: pointer;
+  }
+  .genres,
+  .collections {
+    border-bottom: 2px solid rgba(100, 90, 118, 0.587);
+    padding-right: 60%;
+    padding-bottom: 1rem;
+  }
+  .close-hamburger {
+    font-size: 1.6rem;
+    transition: var(--transition-fast);
+  }
+  .hammy-container:hover .close-hamburger {
+    transform: scale(1.1);
+  }
+  .genres {
+    margin-top: 2rem;
+  }
+  .browse-btn-container {
+    display: none;
+  }
+  /* .close-container > span {
+    font-weight: 400;
+    color: white;
+    display: block;
+  } */
+  .genre-list {
+    overflow: unset;
+  }
+  .favorite-collection {
+    z-index: 2;
+  }
+}
+
+@media (max-width: 470px) {
+  .btn.register-btn {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+  }
+  .btn.sign-in-btn {
+    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+    background-color: white;
+    color: var(--nowflix-deep-purple);
+    border-radius: 8px;
+  }
+  .search-container.show {
+    max-width: 20rem;
+  }
+  /* .close-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  } */
+}

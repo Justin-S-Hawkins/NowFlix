@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# IDE settings
+.vscode/
+
+#files to ignore 
+notes.txt

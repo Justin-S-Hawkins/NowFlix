@@ -1,0 +1,76 @@
+footer {
+  background-color: rgb(22, 20, 32);
+  width: 100vw;
+  border-top: 1px solid rgba(103, 100, 100, 0.192);
+}
+.footer-container {
+  /* position: absolute; */
+  /* bottom: 0; */
+  color: white;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+ul > h2 {
+  color: rgb(189, 186, 186);
+}
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.footer-header > h2,
+.social-icons {
+  border-bottom: 2px solid rgb(43, 41, 52);
+  width: 25%;
+  /* padding-bottom: 1rem; */
+  margin-bottom: 0;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+}
+.link > ul > li {
+  font-weight: 400;
+}
+.link > ul > li,
+.link > ul > h2 {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+/* .link {
+  position: relative;
+} */
+.link {
+  padding-bottom: 3rem;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.social-icons > i {
+  color: rgb(255, 255, 255);
+}
+.footer-header > h2 {
+  color: var(--nowflix-yellow);
+}
+
+.footer-header > h2,
+.social-icons > i {
+  font-size: 1.5rem;
+}
+.hr {
+  border: none;
+  height: 2px;
+  background-color: rgb(43, 41, 52);
+}
+.footer-bottom {
+  text-align: center;
+  color: rgb(189, 186, 186);
+}
+.footer-bottom > p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}

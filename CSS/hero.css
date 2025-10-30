@@ -1,0 +1,213 @@
+/*hero styles */
+
+.hero-arrow-right,
+.hero-arrow-left {
+  font-size: 1.9rem;
+  z-index: 1;
+  margin-top: 20rem;
+  transition: var(--transition-slow);
+}
+.arrows {
+  /* top: 4%;
+  position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  /* width: 98%; */
+  width: 100vw;
+  padding: 1%;
+}
+
+.hero-arrow-right:hover,
+.hero-arrow-left:hover {
+  scale: 1.2;
+}
+.hero-backdrop-list {
+  overflow: hidden;
+}
+.backdrop-li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-width: 100%;
+  transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+/*backdrop styles*/
+.info-layout {
+  position: absolute;
+  top: 45%;
+  margin-left: 5%;
+  color: var(--movie-data);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: var(--transition-fast);
+  /* z-index: 1; */
+}
+.movie-data {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.movie-data > :not(:last-child)::after {
+  content: "•";
+  margin-left: 0.4rem;
+}
+.movie-data > div,
+.movie-data > span,
+.movie-data > .star-container > span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--movie-data);
+}
+/* .overview-btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: wheat;
+}
+.overview-btn:hover {
+  background-color: blue;
+} */
+
+.star-container {
+  display: flex;
+  gap: 0.2rem;
+}
+.star {
+  font-size: 1rem;
+  align-self: center;
+  color: var(--movie-data);
+}
+.title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  font-size: 4rem;
+  color: var(--title-color);
+  transform: var(--transition-slow);
+}
+
+.play-container {
+  display: flex;
+  gap: 0.8em;
+  font-size: 1rem;
+  background-color: var(--nowflix-yellow);
+  align-items: center;
+  width: fit-content;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 10px;
+  transition: var(--transition-fast);
+}
+.play-container:hover {
+  background-color: rgb(181, 181, 0);
+}
+
+.play-container > i,
+.play-container > span {
+  color: var(--nowflix-deep-purple);
+  font-size: 1.4rem;
+  letter-spacing: -1px;
+}
+
+.play-container > .free-txt {
+  background-color: var(--nowflix-deep-purple);
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.play-icon {
+  padding-right: 0.7rem;
+}
+.movie-data > .rating {
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dots-container {
+  display: flex;
+  gap: 0.5rem;
+  /* position: absolute; */
+  /* top: 20rem; */
+  /* left: 37%; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--movie-data);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.active-dot {
+  background-color: rgb(80, 80, 43);
+  width: 2rem;
+  border-radius: 6px;
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--nowflix-yellow);
+  border-radius: 6px;
+}
+
+.dot.active-dot::before {
+  animation: fill 5s linear forwards;
+}
+
+@keyframes fill {
+  from {
+    width: 0.7rem;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 880px) {
+  .dots-container {
+    margin-top: 30%;
+  }
+}
+@media (max-width: 600px) {
+  .dots-container {
+    margin-top: 12rem;
+  }
+  .info-layout {
+    transform: scale(0.8);
+    margin-left: 0;
+  }
+  .title {
+    transform: scale(0.9);
+    margin-left: -2rem;
+  }
+  .hero-arrow-right,
+  .hero-arrow-left {
+    transform: scale(0.8);
+  }
+}
